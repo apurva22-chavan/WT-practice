@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm()">
+        Name: <input type="text" id="name"> <br><br>
+        Email: <input type="email" id="email"><br><br>
+        Mobile: <input type="text" id="mobile"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const mobile = document.getElementById("mobile").value.trim();
+
+            if (name === "") {
+                alert("Enter name");
+                return false;
+            }
+            if (email === "") {
+                alert("Enter email");
+                return false;
+            }
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Invalid email");
+                return false;
+            }
+            if (email.includes(" ")) {
+                alert("Invalid email: No spaces allowed");
+                return false;
+            }
+            if (mobile.length !== 10 || isNaN(mobile)) {
+                alert("Invalid mobile number");
+                return false;
+            }
+
+            alert("Form submitted successfully");
+            return true;
+        }
+    </script>
+</body>
+</html>

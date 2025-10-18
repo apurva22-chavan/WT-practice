@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?> 
+<!DOCTYPE employees [ 
+<!ELEMENT employees (employee+)> 
+<!ELEMENT employee (id, name, designation, department, salary)> 
+<!ELEMENT id (#PCDATA)> 
+<!ELEMENT name (#PCDATA)> 
+<!ELEMENT designation (#PCDATA)> 
+<!ELEMENT department (#PCDATA)> 
+<!ELEMENT salary (#PCDATA)> 
+]> 
+<employees>
+<employee> 
+        <id>10</id> 
+        <name>Apurva Chavan</name> 
+        <designation>Developer</designation> 
+        <department>IT</department> 
+        <salary>100000</salary> 
+    </employee> 
+    <employee> 
+        <id>20</id> 
+        <name>Kirti Datir</name> 
+        <designation>Manager</designation> 
+        <department>Sales</department> 
+        <salary>80000</salary> 
+    </employee> 
+    <employee> 
+        <id>30</id> 
+        <name>Shivani Deshmukh</name> 
+        <designation>Designer</designation> 
+        <department>Marketing</department> 
+        <salary>60000</salary> 
+    </employee> 
+    <employee> 
+        <id>40</id> 
+        <name>Arti Nale</name> 
+        <designation>Assistant</designation> 
+        <department>IT</department> 
+        <salary>40000</salary> 
+    </employee> 
+
+</employees>

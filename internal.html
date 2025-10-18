@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+      body
+        {
+          background-color:lightblue;
+          font-family: verdana;
+        }
+        table 
+        {
+          margin: auto;
+            border: 2px solid black;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            width: 30%;
+            height: 300px;
+        }
+
+        input[type="text"], input[type="password"], select {
+            height: 25px;
+            width: 200px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding-left: 5px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            height: 30px;
+            width: 80px;
+            background-color: rgb(25, 111, 125);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body bgcolor="LightBlue" >
+    <div style="background-color: rgb(9, 98, 43); width:2000px" width="2000px">
+    <marquee behavior="scrolling" direction="left">
+        <h1>REGISTRATION FORM</h1>
+    </marquee>
+</div>
+<table align="center">
+<th><form action="index1.html">
+   <tr>
+    <font family="Verdana">
+       <td>First Name: </td>
+       <td><input type="text" name="First Name" value=""  style="height: 20px; width: 150px;"></td>
+        <br>
+        <br>
+      </tr>
+      <tr></tr>
+      <td>Last Name:</td>
+      <td><input type="text" name="Last Name" value="" style="height: 20px; width: 150px;"></td>
+       <br>
+       <br>
+      </tr>
+      <tr>
+        <td>User ID:</td>
+        <td><input type="text" name="User ID" value="" style="height: 20px; width: 150px;"></td>
+       <br> 
+       <br>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" name="password" value="" style="height: 20px; width: 150px;"></td>
+      <br>
+      <br>
+    </tr>
+    <tr>
+        <td>Contact No:</td> 
+        <td><input type="text" name="Contact No" value="" style="height: 20px; width: 150px;"></td>
+      <br>
+      <br>
+    </tr>
+    <tr>
+        <td>Gender:</td>
+       <td><select name="Gender" style="height: 25px; width: 160px;">
+          <option value="" disabled selected>Select your gender</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+          <option value="Other">Other</option>
+      </select>
+      </td>
+        <br>
+        <br>
+      </tr>
+      <tr>
+        <td>Email ID:</td>
+        <td><input type="text" name="email" value="" style="height: 20px; width: 150px;"></td>
+      <br>
+      <br>
+    </tr>
+
+
+    </font>
+</form>
+</th>
+</table>
+</body>
+</html>

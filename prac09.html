@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html ng-app="studentApp"> 
+<head> 
+    <title>Student Registration</title> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script> </head> 
+<body ng-controller="studentController"> 
+ 
+    <h1>Student Registration Form</h1> 
+    <form ng-submit="submitStudentForm()"> 
+ 
+        <label for="firstName">First Name:</label><br /> 
+        <input type="text" id="firstName" ng-model="student.firstName" required /><br /> 
+ 
+        <label for="lastName">Last Name:</label><br /> 
+        <input type="text" id="lastName" ng-model="student.lastName" required /><br /> 
+ 
+        <label for="userName">User Name:</label><br /> 
+        <input type="text" id="userName" ng-model="student.userName" required /><br /> 
+ 
+        <label for="password">Password:</label><br /> 
+        <input type="password" id="password" ng-model="student.password" required /><br /><br /> 
+ 
+        <input type="submit" value="Register" /> 
+        <input type="reset" ng-click="resetForm()" value="Reset" /> 
+    </form> 
+ 
+    <script>         var app = angular.module('studentApp', []); 
+ 
+        app.controller('studentController', function ($scope) { 
+            $scope.originalStudent = { 
+                firstName: '',                 lastName: '',                 userName: '',                 password: '' 
+            }; 
+ 
+            $scope.student = angular.copy($scope.originalStudent); 
+ 
+            $scope.submitStudentForm = function () {                 alert("Registration Successful!\nWelcome, " + $scope.student.firstName + "!"); 
+                // In real app, save data to backend here                 window.location = "login.html"; 
+            }; 
+ 
+            $scope.resetForm = function () { 
+                $scope.student = angular.copy($scope.originalStudent); 
+            }; 
+        }); 
+    </script> 
+ 
+</body> 
+</html> 

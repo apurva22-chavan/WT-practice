@@ -1,0 +1,39 @@
+<!-- #FIBONACCI NO N JAVASCRIPT FUNCTION  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci JS</title>
+</head>
+<body>
+    <h2>Fibonacci Output</h2>
+    <p id="output"></p>
+
+    <script type="text/javascript">
+        function fibonacci(num) {
+            let num1 = 0;
+            let num2 = 1;
+            let sum;
+            if (num == 1) {
+                return num1;
+            } else if (num == 2) {
+                return num2;
+            } else {
+                for (let i = 3; i <= num; i++) {
+                    sum = num1 + num2;
+                    num1 = num2;
+                    num2 = sum;
+                }
+                return num2;
+            }
+        }
+
+        // Get the output element and display the result
+        document.getElementById("output").innerHTML = 
+            "Fibonacci(5): " + fibonacci(5) + "<br>" + 
+            "Fibonacci(8): " + fibonacci(8);
+    </script>
+</body>
+</html>

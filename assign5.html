@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation </title>
+    <script>
+        function validate(){
+            value=document.getElementById('s1').value;
+            if(isNan(value)){
+                document.getElementById('s').innerHTML="Enter the numeric value only";
+                retun false
+            }
+        return true
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validate()" action="https://google.com/">
+        Enter your number <input type="text" id="s1"><br>
+        <span id="s"></span><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

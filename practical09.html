@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html ng-app="studentApp"> 
+<head> 
+    <title>Student Login</title> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script> </head> 
+<body ng-controller="studentController"> 
+ 
+    <h1>Student Login</h1> 
+    <form ng-submit="submitLoginForm()"> 
+ 
+        <label for="userName">User Name:</label><br /> 
+        <input type="text" id="userName" ng-model="login.userName" required /><br /> 
+ 
+        <label for="password">Password:</label><br /> 
+        <input type="password" id="password" ng-model="login.password" required /><br /><br /> 
+ 
+        <input type="submit" value="Login" /> 
+        <input type="reset" ng-click="resetLoginForm()" value="Reset" />     </form> 
+ 
+    <script>         var app = angular.module('studentApp', []); 
+ 
+        app.controller('studentController', function ($scope) { 
+            // Dummy registered user             var registeredUser = {                 userName: "aartid",                 password: "12345" 
+            }; 
+ 
+            $scope.login = {                 userName: '',                 password: '' 
+            }; 
+ 
+            $scope.submitLoginForm = function () {                 if ($scope.login.userName === registeredUser.userName &&                     $scope.login.password === registeredUser.password) {                     alert("Login Successful! Welcome " + $scope.login.userName);                     window.location = "https://www.google.com"; // You can redirect anywhere 
+                } else { 
+                    alert("Invalid credentials. Please try again."); 
+                } 
+            }; 
+ 
+            $scope.resetLoginForm = function () { 
+                $scope.login = {                     userName: '',                     password: '' 
+                }; 
+            }; 
+        }); 
+    </script> 
+ 
+</body> 
+</html> 

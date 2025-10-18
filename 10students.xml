@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <stud_name>Apurva</stud_name>
+        <roll_no>11</roll_no>
+        <age>21</age>
+        <SGPS>9.14</SGPS>
+    </student>
+
+    <student>
+        <stud_name>Kirti</stud_name>
+        <roll_no>18</roll_no>
+        <age>21</age>
+        <SGPS>9.14</SGPS>
+    </student>
+
+    <student>
+        <stud_name>Shivani</stud_name>
+        <roll_no>20</roll_no>
+        <age>20</age>
+        <SGPS>9.19</SGPS>
+    </student>
+
+    <student>
+        <stud_name>Supriya</stud_name>
+        <roll_no>03</roll_no>
+        <age>21</age>
+        <SGPS>9.14</SGPS>
+    </student>
+
+    <student>
+        <stud_name>Vaishnavi</stud_name>
+        <roll_no>04</roll_no>
+        <age>21</age>
+        <SGPS>7.14</SGPS>
+    </student>
+
+    <student>
+        <stud_name>Renuka</stud_name>
+        <roll_no>100</roll_no>
+        <age>21</age>
+        <SGPS>9.54</SGPS>
+    </student>
+
+    <student>
+        <stud_name>Shital</stud_name>  
+        <roll_no>101</roll_no>
+        <age>21</age>
+        <SGPS>9.43</SGPS>
+    </student>
+
+    <student>
+        <stud_name>Dnyaneshwari</stud_name>
+        <roll_no>98</roll_no>
+        <age>20</age>
+        <SGPS>7.5</SGPS>
+    </student>
+
+    <student>
+        <stud_name>Arti</stud_name>
+        <roll_no>61</roll_no>
+        <age>21</age>
+        <SGPS>7.90</SGPS>
+    </student>
+
+    <student>
+        <stud_name>Shrutika</stud_name>
+        <roll_no>50</roll_no>
+        <age>21</age>
+        <SGPS>7.00</SGPS>
+    </student>
+</students>

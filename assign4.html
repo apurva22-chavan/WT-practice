@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function changeColor(e) {
+           e.preventDefault();
+          let color = document.getElementById('color').value;
+           document.body.style.backgroundColor = color;
+        }
+  
+     </script>
+   <form action="" onsubmit="changeColor(event)">
+      <h1>Change Color</h1>
+      <label for="color">Change the color to: </label>
+      <input type="text" id="color">
+      <button type="submit">change</button>
+   </form>
+</body>
+</html>

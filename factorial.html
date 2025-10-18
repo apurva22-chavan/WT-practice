@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+   <h2>Enter no to find its factorial: </h2> 
+   <input type="number" id="num-input">
+   <button onclick="Factorial()">Calculate Factorial</button>
+   <script>
+    function Factorial(){
+        let numm=document.getElementById("num-input").values
+        let factorial=1;
+        if(num<0){
+            alert("factorial not for negative no")
+            return
+        }
+        for(let i=1; i<num ; i++){
+            factorial*=i;
+        }
+        alert("factorial of"+num+"is"+factorial);
+    }
+   </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+   <h2>Enter a number to find its factorial: </h2> 
+   <input type="number" id="num-input">
+   <button onclick="Factorial()">Calculate Factorial</button>
+
+   <script>
+    function Factorial(){
+        let num = document.getElementById("num-input").value;
+        num = parseInt(num); // Convert string input to number
+
+        if (isNaN(num)) {
+            alert("Please enter a valid number.");
+            return;
+        }
+
+        if (num < 0) {
+            alert("Factorial is not defined for negative numbers.");
+            return;
+        }
+
+        let factorial = 1;
+        for (let i = 1; i <= num; i++) { // Correct loop condition
+            factorial *= i;
+        }
+
+        alert("Factorial of " + num + " is " + factorial);
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change color using DOM</title>
+</head>
+<body>
+   <h1>Making use of DOM</h1> 
+   <p>Click buttons to change color</p>
+   <button onclick="ChangeColor('Pink')">Pink</button>
+   <button onclick="ChangeColor('Green')">Green</button>
+   <button onclick="ChangeColor('Blue')">Blue</button>
+   <button onclick="ChangeColor('Red')">Red</button>
+   <button onclick="ChangeColor('Yellow')">Yellow</button>
+
+   <script>
+    function ChangeColor(color){
+        document.body.style.backgroundColor=color;
+    }
+   </script>
+
+</body>
+</html>

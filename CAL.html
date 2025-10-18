@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #a83232;
+        }
+        .calculator {
+            background: rgb(196, 155, 155);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+        .calculator input {
+            width: calc(50% - 10px);
+            margin: 3px;
+            padding: 10px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .calculator button {
+            margin: 3px;
+            padding: 10px 15px;
+            font-size: 15px;
+            border: none;
+            border-radius: 3px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .calculator button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 13px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <div>
+            <button onclick="calculate('+')">+</button>
+            <button onclick="calculate('-')">-</button>
+            <button onclick="calculate('*')">*</button>
+            <button onclick="calculate('/')">/</button>
+            <button onclick="calculate('square')">^2</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculate(operation) {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const resultDiv = document.getElementById('result');
+
+            if (isNaN(num1)) {
+                resultDiv.textContent = 'Please enter at least the first number.';
+                return;
+            }
+            
+            switch (operation) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num2 !== 0 ? (num1 / num2) : 'Error: Division by zero';
+                    break;
+                case 'square':
+                    result = `First number squared: ${num1 ** 2}`;
+                    if (!isNaN(num2)) {
+                        result += `, Second number squared: ${num2 ** 2}`;
+                    }
+                    break;
+                default:
+                    result = 'Invalid operation';
+            }
+
+            resultDiv.textContent = `Result: ${result}`;
+        }
+    </script>
+</body>
+</html>
